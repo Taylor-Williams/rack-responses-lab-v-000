@@ -1,7 +1,6 @@
 class Application
   def call(env)
     resp = Rack::Response.new
-    puts DateTime.now.strftime("%H")
     if DateTime.now.strftime("%H").to_i < 12
       resp.write "Good Morning!"
     else
